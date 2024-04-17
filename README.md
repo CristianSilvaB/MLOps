@@ -5,7 +5,7 @@
 <hr>  
 
 
-Tomando el papel de un científico de datos para Steam, una multinacional de videojuegos, se busca desarrollar un producto mínimo viable. A partir del conjunto de dataset brindados se buscó crear un sistema de recomendación de videojuegos para los usuarios mediante Machine Learning. Sin embargo, los datos presentan una madurez deficiente. Por lo tanto, es necesario realizar además un ETL (Extracción, Transformación y Carga de los datos), un EDA (Análisis Exploratorio de Datos), y finalmente, la creación del modelo de Machine Learning.
+Tomando el papel de un científico de datos para Steam, una multinacional de videojuegos, se busca desarrollar un producto mínimo viable. A partir del conjunto de dataset brindados se propuso como objetivo crear sistema de recomendación de videojuegos para los usuarios mediante Machine Learning. Sin embargo, los datos brindados presentaban una madurez deficiente. Por lo tanto, fue necesario realizar además un ETL (Extracción, Transformación y Carga de los datos), un EDA (Análisis Exploratorio de Datos), y finalmente, la creación del modelo de Machine Learning.
 
 ## Tecnologías utilizadas
 
@@ -17,19 +17,19 @@ Para el desarrollo de este proyecto se utilizaron tecnologías como: Python, Fas
 
 Se llevó a cabo un proceso de ETL (Extracción, Transformación y Carga) en tres etapas principales:
 
-1. *Extracción*: En esta etapa, se extrajeron y exploraron los datos de las fuentes proporcionadas en el [Dataset](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj)
+1. **Extracción**: En esta etapa, se extrajeron y exploraron los datos de las fuentes proporcionadas en el [Dataset](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj)
 
-2. *Transformación*: Esta etapa implicó una serie de pasos para limpiar y preparar los datos para el análisis, entre ellas:
+2. **Transformación**: Esta etapa implicó una serie de pasos para limpiar y preparar los datos para el análisis, entre ellas:
     - *Identificación y tratamiento de valores nulos*: Se identificaron los valores nulos y se tomaron decisiones sobre cómo manejarlos, ya sea eliminándolos o reemplazándolos con valores significativos.
     - *Revisión de registros duplicados*: Se revisaron los conjuntos de datos en busca de registros duplicados y se tomaron medidas para tratarlos.
     - *Eliminación de datos y columnas innecesarias*: Se eliminaron los datos y las columnas que no eran relevantes para el análisis.
     - *Desanidación de columnas*: Algunas columnas que contenían datos anidados fueron desanidadas para facilitar el análisis.
     - *Filtrado de registros*: Se filtraron los registros según criterios específicos para centrarse en los datos relevantes.
-    - *Conversión de tipos de datos*: Se realizaron conversiones de tipos de datos cuando fue necesario, como la conversión a enteros, la transformación de fechas y el ajuste de precios.
+    - *Conversión de tipos de datos*: Se realizaron conversiones de tipos de datos cuando fue necesario, como la conversión a enteros, la transformación de fechas y el ajuste de precios a valores flotantes.
     - *Creación de nuevas columnas*: Se crearon nuevas columnas a partir de los datos existentes para facilitar el análisis.
     - *Explode de los géneros de videojuegos*: Se realizó un explode de los géneros de videojuegos para facilitar su análisis.
-    - *Preservación de columnas con ID*: Se preservaron las columnas con ID para mantener la integridad de los datos.
-    - *Normalización de datos*: Se normalizaron algunos datos para mantener la consistencia en los conjuntos de datos.
+    - *Preservación de columnas con ID*: Se preservaron las columnas que contenían los IDs para mantener la integridad de los datos.
+    - *Normalización de datos*: Se normalizaron algunos datos para mantener la consistencia.
 
 3. *Carga*: Finalmente, los datos limpios y normalizados se almacenaron en un formato pickle para su uso posterior en el análisis y modelado.
 
@@ -38,9 +38,9 @@ Se llevó a cabo un proceso de ETL (Extracción, Transformación y Carga) en tre
 
 Se realizó un Análisis Exploratorio de Datos (EDA) con el objetivo de comprender las características de los datos. Este incluye:
 
-1. *Exploración Inicial*: Se realizó un chequeo y análisis de valores nulos, duplicados, faltantes; así mismo, se analizaron los tipos de datos y las estadísticas descriptivas para cada dataset.
+1. **Exploración Inicial**: Se realizó un chequeo y análisis de valores nulos, duplicados, faltantes; así mismo, se analizaron los tipos de datos y las estadísticas descriptivas para cada dataset.
 
-2. *Análisis Gráfico y Correlacional*: Se llevó a cabo un análisis bivariado y multivariado que incluye:
+2. **Análisis Gráfico y Correlacional**: Se llevó a cabo un análisis bivariado y multivariado que incluye:
     - Distribución de juegos por género y desarrollador.
     - Tendencias de lanzamiento a lo largo del tiempo.
     - Análisis de precios: distribución de precios y relación entre precio y género.
@@ -51,7 +51,7 @@ Se realizó un Análisis Exploratorio de Datos (EDA) con el objetivo de comprend
     - Relación entre tiempo de juego y género de juegos.
     - Usuarios con mayor tiempo de juego y su distribución entre diferentes juegos.
 
-3. *Resumen Ejecutivo*: Se presentan los hallazgos más importantes, que incluyen:
+3. **Resumen Ejecutivo**: Se presentan los hallazgos más importantes, que incluyen:
     - Estadísticas Descriptivas.
     - Detección de Outliers.
     - Palabras más frecuentes en las reseñas.
@@ -60,11 +60,12 @@ Se realizó un Análisis Exploratorio de Datos (EDA) con el objetivo de comprend
 ### Feature Engineering
 
 A partir de las reseñas obtenidas del conjunto de datos user_reviews, se realizó un análisis de sentimientos utilizando Procesamiento del Lenguaje Natural (NLP). Como resultado de este análisis, se creó una nueva columna que representa el sentimiento de cada reseña. Esta columna toma los siguientes valores:
+
 - '0' si el sentimiento es negativo
 - '1' si el sentimiento es neutral
 - '2' si el sentimiento es positivo
 
-El objetivo de esta transformación es facilitar el análisis de datos y el aprendizaje automático, permitiendo que el modelo utilice esta información de sentimiento de manera efectiva.
+El objetivo de esta transformación es facilitar el análisis de datos y el aprendizaje automático, permitiendo que se utilice la información de los sentimientos y reseñas de manera efectiva.
 
 ### API
 
