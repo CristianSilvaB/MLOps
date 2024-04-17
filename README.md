@@ -84,7 +84,7 @@ Además, se lleva a cabo la creación de las funciones de la API RESTful creada 
 
 ### Modelo de aprendizaje automático
 
-El sistema de recomendación implementado es de tipo ítem-ítem. Cuando se introduce el ID de un juego, el sistema retorna una lista de 5 juegos que guardan similitud con el ingresado. El método empleado es el K-NN (K-nearest neighbors) en combinación con filtrado colaborativo. En la primera etapa, los datos se preprocesan y se optimiza una matriz. Este proceso facilita la identificación de patrones de juego. Posteriormente, el modelo se entrena utilizando una métrica de similitud del coseno y se eligen los 20 juegos más parecidos. Este procedimiento proporciona un equilibrio entre precisión y eficiencia. Las recomendaciones generadas se fundamentan en patrones de juego similares, lo que enriquece la experiencia del usuario en Steam, representando una mejora en la personalización de la experiencia de juego.
+El sistema de recomendación implementado es de tipo ítem-ítem. Cuando se introduce el ID de un juego, el sistema retorna una lista de 5 juegos que similares. El método empleado es el K-NN (K-nearest neighbors) en combinación con filtrado colaborativo. En la primera etapa, los datos se preprocesan y se desarrolla una matriz dispersa. Posteriormente, facilitando la identificación de patrones de juego, el modelo se entrena utilizando una métrica de similitud del coseno y se eligen los 20 juegos más parecidos (vecinos más cercanos). Este procedimiento proporciona un equilibrio entre precisión y eficiencia. Las recomendaciones generadas se fundamentan en patrones de juego similares, lo que enriquece la experiencia del usuario en Steam, representando una mejora en la personalización de la experiencia de juego.
 
 ### Deployment
 
