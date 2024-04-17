@@ -93,4 +93,4 @@ Para el deploy de la API se utilizó [Render](https://render.com/docs/free#free-
 
 ### Video 
 
-Se realizó un video de presentación en el cual se muestra el correcto funcionamiento de la API. En este se muestran distintas consultas a los endpoints de la API y el funcionamiento del modelo de Machine Learning. Se encuentra en este [Link](https://render.com/docs/free#free-web-services)
+Se realizó un video de presentación en el cual se muestra el correcto funcionamiento de la API. En este se muestran distintas consultas a los endpoints de la API y el funcionamiento del modelo de Machine Learning. Se encuentra en este [Link](https://youtu.be/dbuw6F-w2yw))
